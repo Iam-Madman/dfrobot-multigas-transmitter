@@ -1,1 +1,42 @@
-.vscode/
+# --- Build Artifacts & Binaries ---
+*.o
+*.obj
+*.d
+*.crf
+*.lnp
+*.axf
+*.elf
+*.hex
+*.bin
+*.map
+*.lst
+*.su
+
+# --- IDEs & Toolchains ---
+# STM32CubeIDE / Eclipse
+.metadata/
+.ConfigLeave/
+RemoteSystemsTempFiles/
+*.launch
+
+# PlatformIO
+.pio/
+
+# Keil uVision
+*.uvoptx
+*.uvguix.*
+*.uv2*
+Mappings/
+Listings/
+Objects/
+
+# CMake / Make
+CMakeCache.txt
+CMakeFiles/
+CMakeSettings.json
+Makefile
+cmake_install.cmake
+
+# --- OS-specific files ---
+.DS_Store
+Thumbs.db
