@@ -52,10 +52,14 @@ const osThreadAttr_t ADC_AverageTask_attributes = {
   .priority = (osPriority_t) osPriorityNormal,
 };
 /* USER CODE BEGIN PV */
-#define ADC_BUF_LEN  64
+#define ADC_BLOCK_LEN  64
+#define ADC_BUF_LEN    (ADC_BLOCK_LEN * 2) // 128 elements
 
 volatile uint16_t g_adc_raw_buffer[ADC_BUF_LEN];
 volatile uint16_t g_adc_averaged_value = 0;
+
+// Flag to track which half is ready: 0 = First half, 1 = Second half
+volatile uint8_t g_adc_buffer_ready_half = 0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -106,7 +110,7 @@ int main(void)
   MX_DMA_Init();
   MX_ADC1_Init();
   /* USER CODE BEGIN 2 */
-  HAL_ADC_Start_DMA(&hadc1, (uint32_t*)g_adc_raw_buffer, ADC_BUF_LEN);
+  HAL_ADC_Start_DMA(&hadc1, (uint32_t *)(uintptr_t)g_adc_raw_buffer, ADC_BUF_LEN);
   /* USER CODE END 2 */
 
   /* Init scheduler */
@@ -149,9 +153,9 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    /* USER CODE END WHILE */
+	/* USER CODE END WHILE */
 
-    /* USER CODE BEGIN 3 */
+	/* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
 }
@@ -178,13 +182,13 @@ void SystemClock_Config(void)
   RCC_OscInitStruct.PLL.PLLMUL = RCC_PLL_MUL9;
   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
   {
-    Error_Handler();
+	Error_Handler();
   }
 
   /** Initializes the CPU, AHB and APB buses clocks
   */
   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
-                              |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
+							  |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV2;
@@ -192,13 +196,13 @@ void SystemClock_Config(void)
 
   if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_2) != HAL_OK)
   {
-    Error_Handler();
+	Error_Handler();
   }
   PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_ADC;
   PeriphClkInit.AdcClockSelection = RCC_ADCPCLK2_DIV6;
   if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
   {
-    Error_Handler();
+	Error_Handler();
   }
 }
 
@@ -231,7 +235,7 @@ static void MX_ADC1_Init(void)
   hadc1.Init.NbrOfConversion = 1;
   if (HAL_ADC_Init(&hadc1) != HAL_OK)
   {
-    Error_Handler();
+	Error_Handler();
   }
 
   /** Configure Regular Channel
@@ -241,7 +245,7 @@ static void MX_ADC1_Init(void)
   sConfig.SamplingTime = ADC_SAMPLETIME_41CYCLES_5;
   if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
   {
-    Error_Handler();
+	Error_Handler();
   }
   /* USER CODE BEGIN ADC1_Init 2 */
 
@@ -286,7 +290,29 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
+// Called when the first 64 elements (0 to 63) are full
+void HAL_ADC_ConvHalfCpltCallback(ADC_HandleTypeDef* hadc)
+{
+  if(hadc->Instance == ADC1)
+  {
+	g_adc_buffer_ready_half = 0; // First half ready
+	
+	// Notify the task from ISR to process data immediately
+	osThreadFlagsSet(ADC_AverageTaskHandle, 0x01); 
+  }
+}
 
+// Called when the second 64 elements (64 to 127) are full
+void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
+{
+  if(hadc->Instance == ADC1)
+  {
+	g_adc_buffer_ready_half = 1; // Second half ready
+	
+	// Notify the task from ISR to process data immediately
+	osThreadFlagsSet(ADC_AverageTaskHandle, 0x01); 
+  }
+}
 /* USER CODE END 4 */
 
 /* USER CODE BEGIN Header_Start_ADC_AverageTask */
@@ -299,28 +325,34 @@ static void MX_GPIO_Init(void)
 void Start_ADC_AverageTask(void *argument)
 {
   /* USER CODE BEGIN 5 */
-   uint32_t tick = osKernelGetTickCount();
+  uint32_t flags;
   /* Infinite loop */
   for(;;)
   {
-    // 1. Maintain precise 500ms intervals
-    tick += 500;
-    osDelayUntil(tick);
+  osThreadFlagsWait(0x01, osFlagsWaitAny, osWaitForever);
 
-    // 2. Compute the average using strict integer math
-    uint32_t sum = 0;
-    for(int i = 0; i < ADC_BUF_LEN; i++)
-    {
-      sum += g_adc_raw_buffer[i];
-    }
-    
-    // Fast integer division (64 is a power of 2, so the compiler optimizes this to a bit shift)
-    uint16_t temporary_avg = sum / ADC_BUF_LEN;
+	  // 2. Determine which offset to read based on the flag set in the ISR
+	  uint32_t buffer_offset = 0;
+	  if (g_adc_buffer_ready_half == 1)
+	  {
+		buffer_offset = ADC_BLOCK_LEN; // Point to index 64
+	  }
+	  else
+	  {
+		buffer_offset = 0;              // Point to index 0
+	  }
 
-    // 3. Atomically update the global variable
-    // Since writing a 16-bit variable on a 32-bit ARM machine takes exactly 1 clock cycle,
-    // a mutex isn't strictly necessary here unless you map this to larger protocols later.
-    g_adc_averaged_value = temporary_avg;
+	  // 3. Compute the average safely from the stable half
+	  uint32_t sum = 0;
+	  for(int i = 0; i < ADC_BLOCK_LEN; i++)
+	  {
+		sum += g_adc_raw_buffer[buffer_offset + i];
+	  }
+	  
+	  uint16_t temporary_avg = sum / ADC_BLOCK_LEN;
+
+	  // 4. Atomically update global variable
+	  g_adc_averaged_value = temporary_avg;
   }
   /* USER CODE END 5 */
 }
@@ -340,7 +372,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
   /* USER CODE END Callback 0 */
   if (htim->Instance == TIM1)
   {
-    HAL_IncTick();
+	HAL_IncTick();
   }
   /* USER CODE BEGIN Callback 1 */
 
@@ -373,7 +405,7 @@ void assert_failed(uint8_t *file, uint32_t line)
 {
   /* USER CODE BEGIN 6 */
   /* User can add his own implementation to report the file name and line number,
-     ex: printf("Wrong parameters value: file %s on line %d\r\n", file, line) */
+	 ex: printf("Wrong parameters value: file %s on line %d\r\n", file, line) */
   /* USER CODE END 6 */
 }
 #endif /* USE_FULL_ASSERT */

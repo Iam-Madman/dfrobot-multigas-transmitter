@@ -41,3 +41,4 @@ cmake_install.cmake
 .DS_Store
 Thumbs.db
 .vscode/settings.json
+build/.cmake/api/v1/query/client-vscode/query.json
