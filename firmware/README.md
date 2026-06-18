@@ -71,7 +71,7 @@ set print pretty on
 
 ##  VS Code Configuration (`launch.json`)
 
-To automate the sequence above inside VS Code using the **Cortex-Debug** extension, your `.vscode/launch.json` must be configured with explicit `preAttachCommands` and `overrideRestartCommands`.
+To automate the sequence above inside VS Code using the **Cortex-Debug** extension, your `.vscode/launch.json` in your root folder must be configured with explicit `preAttachCommands` and `overrideRestartCommands`.
 
 This configuration bypasses the extension's default auto-probing and prevents the UI from locking up during FreeRTOS context initialization.
 
