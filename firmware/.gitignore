@@ -11,9 +11,7 @@ obj/
 *.d
 
 # --- IDE & Editor Specific ---
-.vscode/ipch/
-.vscode/.cmaketools/
-.vscode/browse.vc.db
+.vscode/
 # Un-comment the line below if you want your personal launch configs kept local only:
 # .vscode/launch.json
 
