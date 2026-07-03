@@ -1,21 +1,16 @@
-A multi-phase industrial instrumentation project developing a Modbus RTU-enabled gas monitoring system.
+# DFRobot Multi-Gas Transmitter
 
-##  Repository Structure
+An industrial-grade, multi-phase gas monitoring system implementing the Modbus RTU protocol over RS-485. This repository serves as a monorepo containing everything from the initial rapid hardware prototypes to production-ready firmware and hardware fabrication files.
 
-The project is structured as a monorepo splitting hardware development from firmware ecosystems:
+---
+
+## Repository Structure
+
+The project separates hardware development from firmware development ecosystems across distinct execution phases:
 
 ```text
 .
-├── fabrication/                 # PCB design files, schematics, and Gerber outputs
+├── fabrication/                 
 └── firmware/
-    ├── arduino_nano_firmware/   # Phase 1: Rapid prototype built on PlatformIO
-    └── bluepill_firmware/       # Phase 2: Production STM32 system (Bare-metal/FreeRTOS)
-
-## Getting Started
-
-Because this project is target-compiled for **clone STM32F103 microcontrollers** and debugged natively via the **Black Magic Probe**, special debugger configuration limits must be applied before launching.
-
-Please navigate into the firmware folder for detailed step-by-step flashing, memory mapping, and debugging instructions:
-
- **[Go to Firmware Documentation & Setup Guide](./firmware/bluepill_firmware/README.md)**
-
+    ├── arduino_nano_firmware/   
+    └── bluepill_firmware/       
