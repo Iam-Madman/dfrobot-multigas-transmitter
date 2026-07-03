@@ -38,18 +38,25 @@ add_executable(${CMAKE_PROJECT_NAME})
 add_subdirectory(cmake/stm32cubemx)
 
 # Link directories setup
-target_link_directories(${CMAKE_PROJECT_NAME} PRIVATE
-    # Add user defined library search paths
+target_link_options(${CMAKE_PROJECT_NAME} PRIVATE 
+    "-T${CMAKE_CURRENT_SOURCE_DIR}/CUSTOM_FLASH.ld"
 )
 
 # Add sources to executable
 target_sources(${CMAKE_PROJECT_NAME} PRIVATE
     # Add user sources here
+    Core/Src/main.c
+    Core/Src/freertos.c
+    Core/Src/stm32f1xx_it.c
+    Core/Src/Modbus.c
+    Core/Src/UARTCallback.c
 )
 
 # Add include paths
 target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
     # Add user defined include paths
+    Core/Inc
+    Core/Config
 )
 
 # Add project symbols (macros)

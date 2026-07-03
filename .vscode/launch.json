@@ -1,6 +1,7 @@
 {
     "version": "0.2.0",
     "configurations": [
+        
         {
             "name": "BMP Attach (Clone)",
             "type": "cortex-debug",
@@ -16,13 +17,12 @@
             "cwd": "${workspaceFolder}/firmware",
             "showDevDebugOutput": "raw",
             "preAttachCommands": [
-                "mem 0x08000000 0x0801FFFF ro",
+                "mem 0x08000000 0x0800FFFF ro",
                 "mem 0x20000000 0x20004FFF rw"
             ],
             "postAttachCommands": [
                 "set mem inaccessible-by-default off",
                 "set breakpoint auto-hw on",
-                "hbreak Start_ADC_AverageTask"
             ],
             "overrideRestartCommands": [
                 "interrupt",
@@ -30,7 +30,8 @@
                 "continue"
             ],
             // Fixed path 👇 (Note: Make sure to place your STM32F103.svd inside the firmware folder)
-            "svdFile": "${workspaceFolder}/firmware/STM32F103.svd"
+            "svdFile": "${workspaceFolder}/firmware/STM32F103.svd",
         }
+        
     ]
 }

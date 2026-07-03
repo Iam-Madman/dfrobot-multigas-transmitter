@@ -1,6 +1,15 @@
+A multi-phase industrial instrumentation project developing a Modbus RTU-enabled gas monitoring system.
+
 ##  Repository Structure
 
-* `firmware/` — Contains the complete STM32 C source code, FreeRTOS task abstractions, CMake compilation profiles, and hardware-specific configurations.
+The project is structured as a monorepo splitting hardware development from firmware ecosystems:
+
+```text
+.
+├── fabrication/                 # PCB design files, schematics, and Gerber outputs
+└── firmware/
+    ├── arduino_nano_firmware/   # Phase 1: Rapid prototype built on PlatformIO
+    └── bluepill_firmware/       # Phase 2: Production STM32 system (Bare-metal/FreeRTOS)
 
 ## Getting Started
 
@@ -8,4 +17,5 @@ Because this project is target-compiled for **clone STM32F103 microcontrollers**
 
 Please navigate into the firmware folder for detailed step-by-step flashing, memory mapping, and debugging instructions:
 
- **[Go to Firmware Documentation & Setup Guide](./firmware/README.md)**
+ **[Go to Firmware Documentation & Setup Guide](./firmware/bluepill_firmware/README.md)**
+
