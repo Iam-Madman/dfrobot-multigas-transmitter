@@ -1,0 +1,21 @@
+{
+    "folders": [
+        {
+            "name": "FULL REPOSITORY",
+            "path": "."
+        },
+        {
+            "name": "Arduino Nano Firmware",
+            "path": "firmware/arduino_nano_firmware(phase1)"
+        },
+        {
+            "name": "STM32 Bluepill Firmware",
+            "path": "firmware/bluepill_firmware"
+        }
+    ],
+    "settings": {
+        // Force CMake to look explicitly at the Bluepill project folder
+        "cmake.sourceDirectory": "${workspaceFolder:STM32 Bluepill Firmware}",
+        "cmake.buildDirectory": "${workspaceFolder:STM32 Bluepill Firmware}/build/${buildType}"
+    }
+}

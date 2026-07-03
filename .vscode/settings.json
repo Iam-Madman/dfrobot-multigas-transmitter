@@ -1,0 +1,5 @@
+{
+    "cmake.sourceDirectory": "${workspaceFolder}/firmware/bluepill_firmware",
+    "cmake.buildDirectory": "${workspaceFolder}/firmware/bluepill_firmware/build/${buildType}",
+    "cmake.ignoreCMakeListsMissing": true
+}

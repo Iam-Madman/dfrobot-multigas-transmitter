@@ -1,20 +1,17 @@
 {
     "version": "0.2.0",
     "configurations": [
-        
         {
             "name": "BMP Attach (Clone)",
             "type": "cortex-debug",
             "request": "attach",
             "servertype": "bmp",
             "gdbPath": "arm-none-eabi-gdb",
-            // Fixed path 👇
-            "executable": "${workspaceFolder}/firmware/build/Debug/Bluepill.elf",
+            "executable": "${workspaceFolder}/firmware/bluepill_firmware/build/Debug/Bluepill.elf",
             "BMPGDBSerialPort": "/dev/ttyBmpGdb",
             "interface": "swd",
             "device": "STM32F103CB",
-            // Fixed path 👇
-            "cwd": "${workspaceFolder}/firmware",
+            "cwd": "${workspaceFolder}/firmware/bluepill_firmware",
             "showDevDebugOutput": "raw",
             "preAttachCommands": [
                 "mem 0x08000000 0x0800FFFF ro",
@@ -22,16 +19,14 @@
             ],
             "postAttachCommands": [
                 "set mem inaccessible-by-default off",
-                "set breakpoint auto-hw on",
+                "set breakpoint auto-hw on"
             ],
             "overrideRestartCommands": [
                 "interrupt",
                 "set {int}0xE000ED0C = 0x05FA0004",
                 "continue"
             ],
-            // Fixed path 👇 (Note: Make sure to place your STM32F103.svd inside the firmware folder)
-            "svdFile": "${workspaceFolder}/firmware/STM32F103.svd",
+            "svdFile": "${workspaceFolder}/firmware/bluepill_firmware/STM32F103.svd"
         }
-        
     ]
 }

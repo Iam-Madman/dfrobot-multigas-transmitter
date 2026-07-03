@@ -40,5 +40,5 @@ cmake_install.cmake
 # --- OS-specific files ---
 .DS_Store
 Thumbs.db
-.vscode/settings.json
 build/.cmake/api/v1/query/client-vscode/query.json
+fabrication/arduino_nano_pcb(phase1)/arduino_nano_pcb(phase1)-backups

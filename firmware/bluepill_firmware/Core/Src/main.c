@@ -866,12 +866,12 @@ for (;;)
   queue_status = osMessageQueueGet(ADC_QueueHandle, & received_ADC_average, NULL, osWaitForever);
   if (queue_status == osOK)
   {
-    float ppm = (float) received_ADC_average * 0.75 f;
+    float ppm = (float) received_ADC_average * 0.75f;
     // FIX: Secure the actual binary semaphore used by the background Modbus engine thread
     if (osSemaphoreAcquire(ModbusH.ModBusSphrHandle, osWaitForever) == osOK)
     {
       InputDATA[REG_ADC_RAW] = received_ADC_average;
-      InputDATA[REG_PPM_X10] = (uint16_t)(ppm * 10.0 f);
+      InputDATA[REG_PPM_X10] = (uint16_t)(ppm * 10.0f);
       HoldingDATA[REG_STATUS] = 0x01;
       osSemaphoreRelease(ModbusH.ModBusSphrHandle);
     }
