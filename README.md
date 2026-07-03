@@ -10,7 +10,7 @@ The project separates hardware development from firmware development ecosystems 
 
 ```text
 .
-├── fabrication/                 # PCB design files, schematics, and manufacturing outputs (Gerbers)
+├── fabrication/                 
 └── firmware/
-    ├── arduino_nano_firmware/   # Phase 1: Rapid evaluation prototype built using PlatformIO
-    └── bluepill_firmware/       # Phase 2: Production STM32 system (Bare-metal / FreeRTOS)
+    ├── arduino_nano_firmware/   
+    └── bluepill_firmware/       
