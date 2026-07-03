@@ -4,7 +4,7 @@ An industrial-grade, multi-phase gas monitoring system implementing the Modbus R
 
 ---
 
-## 📂 Repository Structure
+## Repository Structure
 
 The project separates hardware development from firmware development ecosystems across distinct execution phases:
 
