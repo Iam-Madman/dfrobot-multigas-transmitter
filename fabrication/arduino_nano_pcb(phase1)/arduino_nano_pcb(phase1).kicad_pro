@@ -526,7 +526,7 @@
       "netlist": "",
       "plot": "../arduino_nano_pcb(phase1)(gerber_files)/",
       "specctra_dsn": "",
-      "vrml": ""
+      "vrml": "arduino_nano_pcb(phase1).wrl"
     },
     "page_layout_descr_file": ""
   },

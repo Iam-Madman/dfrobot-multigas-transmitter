@@ -818,15 +818,15 @@
 				(xyz -0 -0 -0)
 			)
 		)
-		(model "${KIPRJMOD}/3d_models/1Display TM1637.wrl"
+		(model "${KIPRJMOD}/3d_models/1Display TM1637.step"
 			(offset
-				(xyz -18.975 -3.88379401 5.38000001)
+				(xyz -19 -4 4.5)
 			)
 			(scale
-				(xyz 0.4 0.4 0.4)
+				(xyz 1 1 1)
 			)
 			(rotate
-				(xyz -0 -0 -0)
+				(xyz 90 -0 -0)
 			)
 		)
 	)
@@ -1563,17 +1563,6 @@
 			(uuid "01404387-602e-4f9e-924c-84678147388f")
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/Module.3dshapes/Arduino_Nano_WithMountingHoles.step"
-			(offset
-				(xyz 0 0 0)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz -0 -0 -0)
-			)
-		)
 		(model "${KIPRJMOD}/3d_models/Arduino_NANO.step"
 			(offset
 				(xyz 8.255 -17.78 5.715)
