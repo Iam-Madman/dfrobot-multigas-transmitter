@@ -275,338 +275,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Connector_Generic:Conn_02x04_Odd_Even"
-			(pin_names
-				(offset 1.016)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "J"
-				(at 1.27 5.08 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "Conn_02x04_Odd_Even"
-				(at 1.27 -7.62 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Generic connector, double row, 02x04, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "connector"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "Connector*:*_2x??_*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "Conn_02x04_Odd_Even_1_1"
-				(rectangle
-					(start -1.27 3.81)
-					(end 3.81 -6.35)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(rectangle
-					(start -1.27 2.667)
-					(end 0 2.413)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 0.127)
-					(end 0 -0.127)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 -2.413)
-					(end 0 -2.667)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 -4.953)
-					(end 0 -5.207)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start 3.81 2.667)
-					(end 2.54 2.413)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start 3.81 0.127)
-					(end 2.54 -0.127)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start 3.81 -2.413)
-					(end 2.54 -2.667)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start 3.81 -4.953)
-					(end 2.54 -5.207)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin passive line
-					(at -5.08 2.54 0)
-					(length 3.81)
-					(name "Pin_1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 7.62 2.54 180)
-					(length 3.81)
-					(name "Pin_2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 0 0)
-					(length 3.81)
-					(name "Pin_3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 7.62 0 180)
-					(length 3.81)
-					(name "Pin_4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -2.54 0)
-					(length 3.81)
-					(name "Pin_5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 7.62 -2.54 180)
-					(length 3.81)
-					(name "Pin_6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -5.08 0)
-					(length 3.81)
-					(name "Pin_7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 7.62 -5.08 180)
-					(length 3.81)
-					(name "Pin_8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "MCU_Module:Arduino_Nano_v3.x"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -1768,12 +1436,6 @@
 		(uuid "1fd9381c-e58d-4e59-a4f2-cf9b6bd7fccf")
 	)
 	(junction
-		(at 41.91 26.67)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "21d9ef70-3a0a-4f4d-bd6e-431f6727afc5")
-	)
-	(junction
 		(at 109.22 146.05)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1784,12 +1446,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "4846fe45-c4e1-4b4b-8f93-372d3fa98788")
-	)
-	(junction
-		(at 41.91 29.21)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "4bbd2079-def9-46c3-bcb3-c504afdabcff")
 	)
 	(junction
 		(at 109.22 151.13)
@@ -1905,16 +1561,6 @@
 	)
 	(wire
 		(pts
-			(xy 29.21 29.21) (xy 41.91 29.21)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0e7a2c19-fc94-4717-8a26-83b8d0464dec")
-	)
-	(wire
-		(pts
 			(xy 76.2 114.3) (xy 76.2 113.03)
 		)
 		(stroke
@@ -1994,6 +1640,16 @@
 		)
 		(uuid "8c38f545-1eef-4600-a471-406c1ab97b4e")
 	)
+	(wire
+		(pts
+			(xy 38.1 26.67) (xy 45.72 26.67)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8df4166d-c36d-4afe-8f03-58ff66991721")
+	)
 	(polyline
 		(pts
 			(xy 76.2 12.7) (xy 76.2 35.56)
@@ -2007,16 +1663,6 @@
 	)
 	(wire
 		(pts
-			(xy 29.21 26.67) (xy 41.91 26.67)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "92ef63a2-cc21-4efd-8034-0f08013f42eb")
-	)
-	(wire
-		(pts
 			(xy 58.42 95.25) (xy 63.5 95.25)
 		)
 		(stroke
@@ -2027,13 +1673,23 @@
 	)
 	(wire
 		(pts
-			(xy 29.21 21.59) (xy 41.91 21.59)
+			(xy 45.72 24.13) (xy 38.1 24.13)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "b8697690-ec98-4495-b3ce-130824e024ce")
+		(uuid "a4c873fe-d6a3-4085-aeb6-ed6513591fdd")
+	)
+	(wire
+		(pts
+			(xy 38.1 29.21) (xy 45.72 29.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c1785274-2353-45c1-be21-d250d0949c8a")
 	)
 	(wire
 		(pts
@@ -2054,6 +1710,16 @@
 			(type default)
 		)
 		(uuid "d4e20f14-0af9-4a52-9d12-f8e4060f8dc3")
+	)
+	(wire
+		(pts
+			(xy 45.72 21.59) (xy 38.1 21.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e243e403-e51f-49a7-9c3b-719418a51798")
 	)
 	(wire
 		(pts
@@ -2085,16 +1751,6 @@
 		)
 		(uuid "fd08d37f-79e7-4f24-aa9c-c6a138a7d1c6")
 	)
-	(wire
-		(pts
-			(xy 29.21 24.13) (xy 41.91 24.13)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fd9f35f1-7883-4c96-8290-3ae101a8a9e4")
-	)
 	(label "MCU_TX_SENSOR_RX"
 		(at 58.42 97.79 180)
 		(effects
@@ -2116,7 +1772,7 @@
 		(uuid "2748ff17-1f52-4237-970c-5711f53e1e12")
 	)
 	(label "MCU_TX_SENSOR_RX"
-		(at 41.91 24.13 0)
+		(at 45.72 24.13 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2156,7 +1812,7 @@
 		(uuid "e4725af3-377a-494b-b674-f565839ec343")
 	)
 	(label "MCU_RX_SENSOR_TX"
-		(at 41.91 21.59 0)
+		(at 45.72 21.59 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2266,7 +1922,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1a00e88d-195c-44d5-ba9a-19cf0ce42539")
-		(property "Reference" "H3"
+		(property "Reference" "H2"
 			(at 115.57 144.7799 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2288,7 +1944,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad_TopBottom"
+		(property "Footprint" "MountingHole:MountingHole_5mm_Pad_TopBottom"
 			(at 111.76 146.05 0)
 			(hide yes)
 			(show_name no)
@@ -2327,7 +1983,7 @@
 		(instances
 			(project "arduino_nano_pcb(phase1)"
 				(path "/be2debc5-223f-4424-9c67-58f6ce38e90e"
-					(reference "H3")
+					(reference "H2")
 					(unit 1)
 				)
 			)
@@ -2335,7 +1991,7 @@
 	)
 	(symbol
 		(lib_id "power:VCC")
-		(at 41.91 29.21 270)
+		(at 45.72 29.21 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2345,8 +2001,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2682b095-24a6-4c83-98c8-bace1af40ac4")
-		(property "Reference" "#PWR05"
-			(at 38.1 29.21 0)
+		(property "Reference" "#PWR02"
+			(at 41.91 29.21 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2357,7 +2013,7 @@
 			)
 		)
 		(property "Value" "VCC"
-			(at 45.72 29.2099 90)
+			(at 49.53 29.2099 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2368,7 +2024,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 41.91 29.21 0)
+			(at 45.72 29.21 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2379,7 +2035,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 41.91 29.21 0)
+			(at 45.72 29.21 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2390,7 +2046,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 41.91 29.21 0)
+			(at 45.72 29.21 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2406,7 +2062,7 @@
 		(instances
 			(project "arduino_nano_pcb(phase1)"
 				(path "/be2debc5-223f-4424-9c67-58f6ce38e90e"
-					(reference "#PWR05")
+					(reference "#PWR02")
 					(unit 1)
 				)
 			)
@@ -2424,7 +2080,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2a6f2436-ee9b-494f-bebb-08d0c6c1bb7a")
-		(property "Reference" "H2"
+		(property "Reference" "H3"
 			(at 115.57 149.8599 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2446,7 +2102,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad_TopBottom"
+		(property "Footprint" "MountingHole:MountingHole_5mm_Pad_TopBottom"
 			(at 111.76 151.13 0)
 			(hide yes)
 			(show_name no)
@@ -2485,7 +2141,7 @@
 		(instances
 			(project "arduino_nano_pcb(phase1)"
 				(path "/be2debc5-223f-4424-9c67-58f6ce38e90e"
-					(reference "H2")
+					(reference "H3")
 					(unit 1)
 				)
 			)
@@ -2503,7 +2159,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "423cf22c-c6a7-449c-8560-166d3157e3bb")
-		(property "Reference" "#PWR01"
+		(property "Reference" "#PWR04"
 			(at 81.28 60.96 0)
 			(hide yes)
 			(show_name no)
@@ -2563,7 +2219,7 @@
 		(instances
 			(project "arduino_nano_pcb(phase1)"
 				(path "/be2debc5-223f-4424-9c67-58f6ce38e90e"
-					(reference "#PWR01")
+					(reference "#PWR04")
 					(unit 1)
 				)
 			)
@@ -2581,7 +2237,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "46d78952-5e50-49b7-b152-edbb694b2ef1")
-		(property "Reference" "H1"
+		(property "Reference" "H4"
 			(at 115.57 154.9399 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2603,7 +2259,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad_TopBottom"
+		(property "Footprint" "MountingHole:MountingHole_5mm_Pad_TopBottom"
 			(at 111.76 156.21 0)
 			(hide yes)
 			(show_name no)
@@ -2642,7 +2298,7 @@
 		(instances
 			(project "arduino_nano_pcb(phase1)"
 				(path "/be2debc5-223f-4424-9c67-58f6ce38e90e"
-					(reference "H1")
+					(reference "H4")
 					(unit 1)
 				)
 			)
@@ -2650,7 +2306,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 41.91 26.67 90)
+		(at 45.72 26.67 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2660,8 +2316,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "589da3c8-0c9f-42a7-aaaa-17e13f6cf8cf")
-		(property "Reference" "#PWR06"
-			(at 48.26 26.67 0)
+		(property "Reference" "#PWR01"
+			(at 52.07 26.67 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2672,7 +2328,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 45.72 26.6699 90)
+			(at 49.53 26.6699 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2683,7 +2339,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 41.91 26.67 0)
+			(at 45.72 26.67 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2694,7 +2350,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 41.91 26.67 0)
+			(at 45.72 26.67 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2705,7 +2361,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 41.91 26.67 0)
+			(at 45.72 26.67 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2721,7 +2377,7 @@
 		(instances
 			(project "arduino_nano_pcb(phase1)"
 				(path "/be2debc5-223f-4424-9c67-58f6ce38e90e"
-					(reference "#PWR06")
+					(reference "#PWR01")
 					(unit 1)
 				)
 			)
@@ -2739,7 +2395,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5a16b9f4-1f47-44e7-b354-c608bf081239")
-		(property "Reference" "#PWR04"
+		(property "Reference" "#PWR07"
 			(at 120.65 29.21 0)
 			(hide yes)
 			(show_name no)
@@ -2800,105 +2456,7 @@
 		(instances
 			(project "arduino_nano_pcb(phase1)"
 				(path "/be2debc5-223f-4424-9c67-58f6ce38e90e"
-					(reference "#PWR04")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector_Generic:Conn_02x04_Odd_Even")
-		(at 34.29 24.13 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "614f2d6f-69f0-4091-9c7f-7ec62f9d5a1a")
-		(property "Reference" "J1"
-			(at 35.56 15.24 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Conn_02x04_Odd_Even"
-			(at 35.56 17.78 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical"
-			(at 34.29 24.13 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 34.29 24.13 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Generic connector, double row, 02x04, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 34.29 24.13 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "8"
-			(uuid "d92683c4-3e5d-4cc6-8263-49eebc263a87")
-		)
-		(pin "7"
-			(uuid "af58bce8-fe19-46cf-b9c2-5420a4ff41d4")
-		)
-		(pin "6"
-			(uuid "ac272f9d-5875-409e-93e3-589d06f47499")
-		)
-		(pin "5"
-			(uuid "b27224e6-18b9-48f6-86c1-1c36b38c9c0a")
-		)
-		(pin "4"
-			(uuid "142733b5-1429-459e-912d-17050ba32c9c")
-		)
-		(pin "2"
-			(uuid "ba70e798-c3bf-4670-833f-cbf677e9ace0")
-		)
-		(pin "1"
-			(uuid "272a3448-d83d-41be-8cf2-d60dc81f19bd")
-		)
-		(pin "3"
-			(uuid "907dee95-56c7-41d6-b5fd-fb159850033a")
-		)
-		(instances
-			(project "arduino_nano_pcb(phase1)"
-				(path "/be2debc5-223f-4424-9c67-58f6ce38e90e"
-					(reference "J1")
+					(reference "#PWR07")
 					(unit 1)
 				)
 			)
@@ -2916,7 +2474,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "71398750-25ff-4606-aa42-ddf14f308f59")
-		(property "Reference" "#PWR07"
+		(property "Reference" "#PWR05"
 			(at 109.22 165.1 0)
 			(hide yes)
 			(show_name no)
@@ -2976,7 +2534,7 @@
 		(instances
 			(project "arduino_nano_pcb(phase1)"
 				(path "/be2debc5-223f-4424-9c67-58f6ce38e90e"
-					(reference "#PWR07")
+					(reference "#PWR05")
 					(unit 1)
 				)
 			)
@@ -3150,6 +2708,92 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:Conn_01x04_Pin")
+		(at 33.02 24.13 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8bd8e2ef-6530-464e-9362-ee5386ecec82")
+		(property "Reference" "J1"
+			(at 33.655 16.51 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_01x04_Pin"
+			(at 33.655 19.05 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Horizontal"
+			(at 33.02 24.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 33.02 24.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x04, script generated"
+			(at 33.02 24.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "3"
+			(uuid "b9622427-761d-4093-9180-ea1720397378")
+		)
+		(pin "1"
+			(uuid "ae1ce825-643f-4164-a0e5-da733dc50292")
+		)
+		(pin "2"
+			(uuid "b4434f8e-82a8-4102-8749-82bf1f175652")
+		)
+		(pin "4"
+			(uuid "5358bb21-c093-4a5c-8117-8527a63d37e0")
+		)
+		(instances
+			(project "arduino_nano_pcb(phase1)"
+				(path "/be2debc5-223f-4424-9c67-58f6ce38e90e"
+					(reference "J1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Mechanical:MountingHole_Pad")
 		(at 111.76 140.97 270)
 		(unit 1)
@@ -3161,7 +2805,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9c005c97-8cd4-452f-88f2-cb23c3ef069f")
-		(property "Reference" "H4"
+		(property "Reference" "H1"
 			(at 115.57 139.6999 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3183,7 +2827,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad_TopBottom"
+		(property "Footprint" "MountingHole:MountingHole_5mm_Pad_TopBottom"
 			(at 111.76 140.97 0)
 			(hide yes)
 			(show_name no)
@@ -3222,7 +2866,7 @@
 		(instances
 			(project "arduino_nano_pcb(phase1)"
 				(path "/be2debc5-223f-4424-9c67-58f6ce38e90e"
-					(reference "H4")
+					(reference "H1")
 					(unit 1)
 				)
 			)
@@ -3260,7 +2904,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
+		(property "Footprint" "TM1637:TM1637"
 			(at 101.6 24.13 0)
 			(hide yes)
 			(show_name no)
@@ -3326,7 +2970,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b4261e55-574b-48ba-af9d-8b4741d78493")
-		(property "Reference" "#PWR03"
+		(property "Reference" "#PWR06"
 			(at 110.49 26.67 0)
 			(hide yes)
 			(show_name no)
@@ -3387,7 +3031,7 @@
 		(instances
 			(project "arduino_nano_pcb(phase1)"
 				(path "/be2debc5-223f-4424-9c67-58f6ce38e90e"
-					(reference "#PWR03")
+					(reference "#PWR06")
 					(unit 1)
 				)
 			)
@@ -3405,7 +3049,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e3fc2d79-5e5a-4cb1-ab41-cdf34713f6a2")
-		(property "Reference" "#PWR02"
+		(property "Reference" "#PWR03"
 			(at 76.2 120.65 0)
 			(hide yes)
 			(show_name no)
@@ -3465,7 +3109,7 @@
 		(instances
 			(project "arduino_nano_pcb(phase1)"
 				(path "/be2debc5-223f-4424-9c67-58f6ce38e90e"
-					(reference "#PWR02")
+					(reference "#PWR03")
 					(unit 1)
 				)
 			)

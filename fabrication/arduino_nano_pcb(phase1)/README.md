@@ -4,7 +4,7 @@ The Phase 1 board utilizes an Arduino Nano baseboard designed for rapid validati
 
 ### Board Previews
 
-| | |
-|---|---|
-| ![Full PCB](images/pcb.png) | ![Top View](images/top.png) |
-| ![Full PCB with components](images/pcb_with.png) | ![Top View with components](images/top_with.png) |
+| |
+|---|
+| ![Top View](images/top.png) |
+| ![Top View with components](images/top_with.png) |
