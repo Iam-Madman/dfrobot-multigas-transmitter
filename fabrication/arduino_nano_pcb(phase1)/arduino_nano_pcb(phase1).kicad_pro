@@ -524,7 +524,7 @@
     "last_paths": {
       "idf": "",
       "netlist": "",
-      "plot": "",
+      "plot": "../arduino_nano_pcb(phase1)(gerber_files)/",
       "specctra_dsn": "",
       "vrml": ""
     },
