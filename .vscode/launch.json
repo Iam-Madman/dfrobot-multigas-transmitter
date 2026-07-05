@@ -2,7 +2,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "BMP Attach (Clone)",
+            "name": "Black Magic Probe Attach",
             "type": "cortex-debug",
             "request": "attach",
             "servertype": "bmp",
@@ -12,7 +12,7 @@
             "interface": "swd",
             "device": "STM32F103CB",
             "cwd": "${workspaceFolder}/firmware/bluepill_firmware",
-            "showDevDebugOutput": "raw",
+            "showDevDebugOutput": "raw",//remove if needed
             "preAttachCommands": [
                 "mem 0x08000000 0x0800FFFF ro",
                 "mem 0x20000000 0x20004FFF rw"
@@ -23,10 +23,9 @@
             ],
             "overrideRestartCommands": [
                 "interrupt",
-                "set {int}0xE000ED0C = 0x05FA0004",
+                "set {int}0xE000ED0C = 0x05FA0004",//reset the device
                 "continue"
             ],
-            "svdFile": "${workspaceFolder}/firmware/bluepill_firmware/STM32F103.svd"
         }
     ]
 }

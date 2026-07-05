@@ -1,0 +1,14 @@
+# KiCad backup directories and autosave files
+*-backups/
+*.bak
+*~
+~*.lck
+
+# KiCad workspace user-specific layout preferences
+*.kicad_prl
+
+# CAM/Milling generation files (if you export them later)
+*.gbr
+*.drl
+*.pos
+*.rpt
