@@ -5,7 +5,7 @@
       "Application": "Pcbnew",
       "Version": "10.0.3"
     },
-    "CreationDate": "2026-07-05T22:38:31+05:30"
+    "CreationDate": "2026-07-06T19:50:57+05:30"
   },
   "GeneralSpecs": {
     "ProjectId": {
@@ -42,36 +42,6 @@
       "Path": "arduino_nano_pcb(phase1)-B_Cu.gbr",
       "FileFunction": "Copper,L2,Bot",
       "FilePolarity": "Positive"
-    },
-    {
-      "Path": "arduino_nano_pcb(phase1)-F_Paste.gbr",
-      "FileFunction": "SolderPaste,Top",
-      "FilePolarity": "Positive"
-    },
-    {
-      "Path": "arduino_nano_pcb(phase1)-B_Paste.gbr",
-      "FileFunction": "SolderPaste,Bot",
-      "FilePolarity": "Positive"
-    },
-    {
-      "Path": "arduino_nano_pcb(phase1)-F_Silkscreen.gbr",
-      "FileFunction": "Legend,Top",
-      "FilePolarity": "Positive"
-    },
-    {
-      "Path": "arduino_nano_pcb(phase1)-B_Silkscreen.gbr",
-      "FileFunction": "Legend,Bot",
-      "FilePolarity": "Positive"
-    },
-    {
-      "Path": "arduino_nano_pcb(phase1)-F_Mask.gbr",
-      "FileFunction": "SolderMask,Top",
-      "FilePolarity": "Negative"
-    },
-    {
-      "Path": "arduino_nano_pcb(phase1)-B_Mask.gbr",
-      "FileFunction": "SolderMask,Bot",
-      "FilePolarity": "Negative"
     },
     {
       "Path": "arduino_nano_pcb(phase1)-Edge_Cuts.gbr",
