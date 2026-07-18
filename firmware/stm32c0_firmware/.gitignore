@@ -1,0 +1,30 @@
+# --- Build Artifacts ---
+build/
+bin/
+obj/
+*.elf
+*.bin
+*.hex
+*.map
+*.o
+*.obj
+*.d
+
+# --- IDE & Editor Specific ---
+.vscode/
+
+# --- Tool & Language Caches ---
+.cache/
+.clangd/
+compile_commands.json
+
+# --- CMake Local Artifacts ---
+CMakeCache.txt
+CMakeFiles/
+CMakeUserPresets.json
+Makefile
+cmake_install.cmake
+
+# --- OS Generated Files ---
+.DS_Store
+Thumbs.db

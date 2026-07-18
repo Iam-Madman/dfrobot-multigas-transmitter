@@ -1,0 +1,15 @@
+# KiCad backup directories, zip files, and autosaves
+*-backups/
+*.zip
+*.bak
+*~
+~*.lck
+
+# KiCad workspace user-specific layout preferences
+*.kicad_prl
+
+# CAM / Fabrication outputs (uncomment if you want to keep repo clean of gerbers)
+# *.gbr
+# *.drl
+# *.pos
+# *.rpt

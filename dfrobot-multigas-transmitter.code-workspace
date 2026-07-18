@@ -16,6 +16,13 @@
     "settings": {
         // Force CMake to look explicitly at the Bluepill project folder
         "cmake.sourceDirectory": "${workspaceFolder:STM32 Bluepill Firmware}",
-        "cmake.buildDirectory": "${workspaceFolder:STM32 Bluepill Firmware}/build/${buildType}"
+        "cmake.buildDirectory": "${workspaceFolder:STM32 Bluepill Firmware}/build/${buildType}",
+        "clangd.arguments": [
+            "--background-index",
+            "--clang-tidy",
+            "--header-insertion=never",
+            "--compile-commands-dir=/home/abinav/Desktop/Projects/cusat_gas/final/dfrobot-multigas-transmitter/firmware/arduino_nano_firmware(phase1)/.cache/clangd",
+            "--query-driver=/home/abinav/.platformio/packages/toolchain-*/bin/*,/home/abinav/.platformio/packages/tool-*/bin/*"
+        ]
     }
 }
